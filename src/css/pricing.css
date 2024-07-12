@@ -1,0 +1,159 @@
+/* Variables for easier color management */
+/* Define font face for Playfair Display */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PD-static/PlayfairDisplay-Regular.ttf") format("truetype");
+  /* Add other formats if available */
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Playfair Display", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Arial, sans-serif;
+  /* Fallback to Arial or sans-serif if 'Playfair Display' fails to load */
+}
+
+p {
+  font-family: "Playfair Display", Arial, sans-serif;
+  /* Fallback to Arial or sans-serif */
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  transition: top 0.3s;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+header nav .logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+header nav .nav-links li {
+  flex: 1;
+  text-align: center;
+}
+header nav .nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+header nav .nav-links li a:hover {
+  color: #f5f5f5;
+}
+
+.pricing-guide {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 10%;
+}
+.pricing-guide h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.pricing-guide h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.pricing-guide .note {
+  font-size: 0.9em;
+  color: #999;
+  margin-bottom: 20px;
+}
+.pricing-guide .images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.pricing-guide .images img {
+  width: 23%;
+  height: auto;
+}
+.pricing-guide .packages {
+  display: flex;
+  justify-content: space-between;
+}
+.pricing-guide .packages .package {
+  width: 23%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricing-guide .packages .package h3 {
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin: 0 -10px 10px -10px;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.2em;
+}
+.pricing-guide .packages .package ul {
+  height: 100%;
+  padding: 20px;
+  font-size: 0.9em;
+  text-align: left;
+}
+.pricing-guide .packages .package ul li {
+  margin-bottom: 5px;
+}
+.pricing-guide .packages .package .price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.pricing-guide .packages .package button {
+  background: #b4d7d9;
+  font-size: 0.9em;
+  font-weight: 600;
+  width: 100%;
+  height: 30px;
+  color: #555;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .pricing-guide .packages {
+    flex-wrap: wrap;
+  }
+  .pricing-guide .packages .package {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .pricing-guide .images {
+    flex-direction: column;
+  }
+  .pricing-guide .images img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .pricing-guide .packages {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-guide .packages .package {
+    width: 90%;
+  }
+}/*# sourceMappingURL=pricing.css.map */
