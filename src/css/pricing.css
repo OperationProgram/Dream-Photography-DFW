@@ -158,38 +158,40 @@ header nav .nav-links li a:hover {
   }
 }
 
-.side-nav-container {
-  position: absolute;
+.sub-services {
+  display: flex;
+}
+.sub-services .side-nav-container {
+  background-color: red;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
   width: 0;
-  overflow: hidden;
   transition: width 0.3s ease;
-  display: none;
 }
-.side-nav-container .side-nav {
+.sub-services .side-nav-container .side-nav {
   border-right: solid 2px #000;
-  position: fixed;
+  position: relative;
   width: 200px;
+  background-color: #f0f0f0;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
   z-index: 1000;
 }
-.side-nav-container .side-nav ul {
+.sub-services .side-nav-container .side-nav ul {
   list-style-type: none;
   padding: 0;
 }
-.side-nav-container .side-nav ul li {
+.sub-services .side-nav-container .side-nav ul li {
   margin-bottom: 10px;
 }
-.side-nav-container .side-nav ul li a {
+.sub-services .side-nav-container .side-nav ul li a {
   text-decoration: none;
   color: #333;
 }
-
-.service {
+.sub-services .service {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -197,28 +199,28 @@ header nav .nav-links li a:hover {
   margin-left: 200px;
   background-color: #b4d7d9;
 }
-.service .img-container {
+.sub-services .service .img-container {
   display: flex;
   background-color: #e0e0e0;
   justify-content: center;
 }
-.service .img-container img {
+.sub-services .service .img-container img {
   margin: 0 30px;
   width: 20%;
   height: auto;
 }
-.service ul {
+.sub-services .service ul {
   margin: 37px;
 }
-.service p {
+.sub-services .service p {
   font-size: 1.5em;
 }
 @media (max-width: 768px) {
-  .service .img-container {
+  .sub-services .service .img-container {
     flex-direction: column;
     align-items: center;
   }
-  .service .img-container img {
+  .sub-services .service .img-container img {
     width: 50%;
     margin: 20px;
   }
