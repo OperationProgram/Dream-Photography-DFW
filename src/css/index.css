@@ -119,17 +119,17 @@ header nav .nav-links li a:hover {
 }
 .header-text-section h1 {
   font-size: 2.5rem;
-  color: #000000;
+  color: #333;
   margin-bottom: 1rem;
 }
 .header-text-section h2 {
   font-size: 2rem;
-  color: #000000;
+  color: #333;
   margin-bottom: -1rem;
 }
 .header-text-section p {
   font-size: 1.2rem;
-  color: #000000;
+  color: #333;
   width: 80%;
   margin: auto;
 }
@@ -201,13 +201,13 @@ header nav .nav-links li a:hover {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #000000;
+  background-color: #333;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
 }
 .about-text a:hover {
-  background-color: black;
+  background-color: #1a1a1a;
 }
 
 .about-image {
