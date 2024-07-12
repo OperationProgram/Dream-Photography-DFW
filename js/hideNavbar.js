@@ -6,8 +6,8 @@ window.addEventListener('scroll', function() {
     if (scrollTop > lastScrollTop) {
         // Scrolling down
         header.style.top = '-100px';
-    } else {
-        // Scrolling up
+    } else if (scrollTop === 0) {
+        // At the very top of the page
         header.style.top = '0';
     }
     lastScrollTop = scrollTop;
