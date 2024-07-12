@@ -1,0 +1,323 @@
+/* Variables for easier color management */
+$primary-color: #333;
+$secondary-color: #fff;
+$accent-color: #f5f5f5;
+$overlay-color: rgba(108, 208, 255, 0.5);
+
+
+/* Define font face for Playfair Display */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/assets/fonts/PD-static/PlayfairDisplay-Regular.ttf') format('truetype');
+    /* Add other formats if available */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply fonts to elements */
+body {
+    font-family: 'Playfair Display', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Arial, sans-serif;
+    /* Fallback to Arial or sans-serif if 'Playfair Display' fails to load */
+}
+
+p {
+    font-family: 'Playfair Display', Arial, sans-serif;
+    /* Fallback to Arial or sans-serif */
+}
+
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+    transition: top 0.3s;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+
+        .logo {
+            font-size: 1.5rem;
+            color: $secondary-color;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            
+
+            li {
+                flex: 1;
+                text-align: center;
+                
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1rem;
+
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%;
+
+            .carousel-item {
+                width: 100%;
+                height: 100%;
+                flex: 0 0 100%;
+                img {
+                    width: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .carousel-item.active {
+                display: block;
+            }
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+
+            button {
+                background: rgba(0, 0, 0, 0.5);
+                border: none;
+                color: #fff;
+                padding: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+    }
+}
+
+
+.header-text-section {
+    padding: 7rem;
+    background-color: $secondary-color;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: -1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $primary-color;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.photo-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background-color: #1d1d1d;
+
+    .photo-card {
+        position: relative;
+        width: 30%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: $secondary-color;
+            opacity: 1;
+            transition: opacity 0.3s;
+
+            h2 {
+                margin: 0;
+                font-size: 1.5rem;
+                letter-spacing: .12em;
+            }
+
+            p {
+                margin: 0;
+                font-size: 1rem;
+                letter-spacing: .12em;
+
+            }
+        }
+
+        &:hover .photo-overlay {
+            opacity: 0;
+        }
+    }
+}
+
+.about {
+    display: flex;
+    padding: 2rem;
+    background-color: $accent-color;
+    margin: 0 auto;
+    align-items: center; /* Center vertically */
+    line-height: 2;
+}
+
+.about-text {
+    width: 60%;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: $primary-color;
+        color: $secondary-color;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+.about-image {
+    width: 40%;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+    img {
+        width: 100%;
+        clip-path: circle(50% at 50% 50%);
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+.testimonial {
+    position: relative;
+    height: 60vh;
+    background: url('/assets/images/hero-camera.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+    .testimonial-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .testimonial-content {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin: 0 1rem;
+
+        blockquote {
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+            font-style: italic;
+            letter-spacing: .06em;
+        }
+
+        .author {
+            font-size: 1.2rem;
+            margin: 0 0 1rem;
+            font-weight: bold;
+            padding: 20px;
+            letter-spacing: .12em;
+
+        }
+
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+}
+

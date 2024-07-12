@@ -1,0 +1,276 @@
+/* Variables for easier color management */
+/* Define font face for Playfair Display */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PD-static/PlayfairDisplay-Regular.ttf") format("truetype");
+  /* Add other formats if available */
+  font-weight: normal;
+  font-style: normal;
+}
+/* Apply fonts to elements */
+body {
+  font-family: "Playfair Display", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Arial, sans-serif;
+  /* Fallback to Arial or sans-serif if 'Playfair Display' fails to load */
+}
+
+p {
+  font-family: "Playfair Display", Arial, sans-serif;
+  /* Fallback to Arial or sans-serif */
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  transition: top 0.3s;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+header nav .logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+header nav .nav-links li {
+  flex: 1;
+  text-align: center;
+}
+header nav .nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+header nav .nav-links li a:hover {
+  color: #f5f5f5;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-section .carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-section .carousel .carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+.hero-section .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+}
+.hero-section .carousel .carousel-inner .carousel-item img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-section .carousel .carousel-inner .carousel-item.active {
+  display: block;
+}
+.hero-section .carousel .carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.hero-section .carousel .carousel-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 1rem;
+  cursor: pointer;
+}
+.hero-section .carousel .carousel-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.header-text-section {
+  padding: 7rem;
+  background-color: #fff;
+  text-align: center;
+}
+.header-text-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.header-text-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: -1rem;
+}
+.header-text-section p {
+  font-size: 1.2rem;
+  color: #333;
+  width: 80%;
+  margin: auto;
+}
+
+.photo-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background-color: #1d1d1d;
+}
+.photo-section .photo-card {
+  position: relative;
+  width: 30%;
+}
+.photo-section .photo-card img {
+  width: 100%;
+  height: auto;
+}
+.photo-section .photo-card .photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.photo-section .photo-card .photo-overlay h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+}
+.photo-section .photo-card .photo-overlay p {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+}
+.photo-section .photo-card:hover .photo-overlay {
+  opacity: 0;
+}
+
+.about {
+  display: flex;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  align-items: center; /* Center vertically */
+  line-height: 2;
+}
+
+.about-text {
+  width: 60%;
+}
+.about-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.about-text p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+.about-text a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.about-text a:hover {
+  background-color: #1a1a1a;
+}
+
+.about-image {
+  width: 40%;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.about-image img {
+  width: 100%;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  height: auto;
+  border-radius: 10px;
+}
+
+.testimonial {
+  position: relative;
+  height: 60vh;
+  background: url("/assets/images/hero-camera.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.testimonial .testimonial-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.testimonial .testimonial-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 1rem;
+}
+.testimonial .testimonial-content blockquote {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+.testimonial .testimonial-content .author {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  font-weight: bold;
+  padding: 20px;
+  letter-spacing: 0.12em;
+}
+.testimonial .testimonial-content .cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.testimonial .testimonial-content .cta-button:hover {
+  background-color: #f5f5f5;
+}/*# sourceMappingURL=index.css.map */
