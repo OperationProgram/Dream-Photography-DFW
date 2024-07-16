@@ -21,7 +21,6 @@ p {
 
 
 
-
 header {
     position: fixed;
     width: 100%;
@@ -63,6 +62,24 @@ header {
                         color: $accent-color;
                     }
                 }
+            }
+        }
+
+        .hamburger-menu {
+            display: none; /* Hide by default */
+        }
+        
+        /* Media query for screens 768px and smaller */
+        @media screen and (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show the hamburger menu */
+                cursor: pointer;
+            }
+            .nav-links {
+                display: none; /* Hide the regular nav-links */
+            }
+            .nav-links.active {
+                display: block; /* Show nav-links when hamburger menu is active */
             }
         }
     }
@@ -516,7 +533,7 @@ header {
     }
 
     @media (max-width: 1200px) {
-        height: 50vh;
+        // height: 50vh;
 
         .testimonial-content {
             blockquote {
@@ -535,7 +552,7 @@ header {
     }
 
     @media (max-width: 992px) {
-        height: 40vh;
+        // height: 40vh;
 
         .testimonial-content {
             blockquote {
@@ -554,7 +571,7 @@ header {
     }
 
     @media (max-width: 768px) {
-        height: 35vh;
+        // height: 35vh;
 
         .testimonial-content {
             blockquote {
@@ -573,7 +590,7 @@ header {
     }
 
     @media (max-width: 576px) {
-        height: 30vh;
+        // height: 30vh;
 
         .testimonial-content {
             blockquote {
