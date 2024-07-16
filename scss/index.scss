@@ -70,7 +70,7 @@ header {
 
 .hero-section {
     position: relative;
-    // height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +124,11 @@ header {
     }
 }
 
-
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+    }
+}
 .header-text-section {
     // padding: 7rem;
     background-color: $secondary-color;
