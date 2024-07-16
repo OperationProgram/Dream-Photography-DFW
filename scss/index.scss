@@ -70,12 +70,12 @@ header {
 
 .hero-section {
     position: relative;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
+    margin-bottom: 80px;
     .carousel {
         position: relative;
         width: 100%;
@@ -126,7 +126,7 @@ header {
 
 
 .header-text-section {
-    padding: 7rem;
+    // padding: 7rem;
     background-color: $secondary-color;
     text-align: center;
 
