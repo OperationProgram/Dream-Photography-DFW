@@ -64,11 +64,11 @@ header nav .nav-links li a:hover {
 
 .hero-section {
   position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 80px;
 }
 .hero-section .carousel {
   position: relative;
@@ -113,6 +113,7 @@ header nav .nav-links li a:hover {
 }
 
 .header-text-section {
+  padding: 7rem;
   background-color: #fff;
   text-align: center;
 }
@@ -131,6 +132,63 @@ header nav .nav-links li a:hover {
   color: #000000;
   width: 80%;
   margin: auto;
+}
+@media (max-width: 1200px) {
+  .header-text-section {
+    padding: 5rem;
+  }
+  .header-text-section h1 {
+    font-size: 2.2rem;
+  }
+  .header-text-section h2 {
+    font-size: 1.8rem;
+  }
+  .header-text-section p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 992px) {
+  .header-text-section {
+    padding: 4rem;
+  }
+  .header-text-section h1 {
+    font-size: 2rem;
+  }
+  .header-text-section h2 {
+    font-size: 1.6rem;
+  }
+  .header-text-section p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .header-text-section {
+    padding: 3rem;
+  }
+  .header-text-section h1 {
+    font-size: 1.8rem;
+  }
+  .header-text-section h2 {
+    font-size: 1.4rem;
+  }
+  .header-text-section p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .header-text-section {
+    padding: 2rem;
+  }
+  .header-text-section h1 {
+    font-size: 1.6rem;
+  }
+  .header-text-section h2 {
+    font-size: 1.2rem;
+  }
+  .header-text-section p {
+    font-size: 0.8rem;
+    width: 90%;
+  }
 }
 
 .photo-section {
@@ -175,6 +233,55 @@ header nav .nav-links li a:hover {
 .photo-section .photo-card:hover .photo-overlay {
   opacity: 0;
 }
+@media (max-width: 1200px) {
+  .photo-section .photo-card {
+    width: 45%;
+  }
+  .photo-section .photo-overlay h2 {
+    font-size: 1.3rem;
+  }
+  .photo-section .photo-overlay p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 992px) {
+  .photo-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo-section .photo-card {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .photo-section .photo-overlay h2 {
+    font-size: 1.2rem;
+  }
+  .photo-section .photo-overlay p {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 768px) {
+  .photo-section .photo-card {
+    width: 90%;
+  }
+  .photo-section .photo-overlay h2 {
+    font-size: 1rem;
+  }
+  .photo-section .photo-overlay p {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 576px) {
+  .photo-section .photo-card {
+    width: 100%;
+  }
+  .photo-section .photo-overlay h2 {
+    font-size: 0.9rem;
+  }
+  .photo-section .photo-overlay p {
+    font-size: 0.7rem;
+  }
+}
 
 .about {
   display: flex;
@@ -183,6 +290,12 @@ header nav .nav-links li a:hover {
   margin: 0 auto;
   align-items: center; /* Center vertically */
   line-height: 2;
+}
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
 }
 
 .about-text {
@@ -208,6 +321,44 @@ header nav .nav-links li a:hover {
 .about-text a:hover {
   background-color: black;
 }
+@media (max-width: 992px) {
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .about-text a {
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+  .about-text p {
+    font-size: 0.9rem;
+  }
+  .about-text a {
+    padding: 0.3rem 0.6rem;
+  }
+}
+@media (max-width: 576px) {
+  .about-text h1 {
+    font-size: 1.4rem;
+  }
+  .about-text p {
+    font-size: 0.8rem;
+  }
+  .about-text a {
+    padding: 0.2rem 0.5rem;
+  }
+}
 
 .about-image {
   width: 40%;
@@ -222,6 +373,26 @@ header nav .nav-links li a:hover {
           clip-path: circle(50% at 50% 50%);
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 992px) {
+  .about-image {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+  .about-image img {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .about-image img {
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .about-image img {
+    width: 60%;
+  }
 }
 
 .testimonial {
@@ -272,4 +443,64 @@ header nav .nav-links li a:hover {
 }
 .testimonial .testimonial-content .cta-button:hover {
   background-color: #f5f5f5;
+}
+@media (max-width: 1200px) {
+  .testimonial {
+    height: 50vh;
+  }
+  .testimonial .testimonial-content blockquote {
+    font-size: 1.4rem;
+  }
+  .testimonial .testimonial-content .author {
+    font-size: 1.1rem;
+  }
+  .testimonial .testimonial-content .cta-button {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 992px) {
+  .testimonial {
+    height: 40vh;
+  }
+  .testimonial .testimonial-content blockquote {
+    font-size: 1.3rem;
+  }
+  .testimonial .testimonial-content .author {
+    font-size: 1rem;
+  }
+  .testimonial .testimonial-content .cta-button {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .testimonial {
+    height: 35vh;
+  }
+  .testimonial .testimonial-content blockquote {
+    font-size: 1.2rem;
+  }
+  .testimonial .testimonial-content .author {
+    font-size: 0.95rem;
+  }
+  .testimonial .testimonial-content .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 576px) {
+  .testimonial {
+    height: 30vh;
+  }
+  .testimonial .testimonial-content blockquote {
+    font-size: 1.1rem;
+  }
+  .testimonial .testimonial-content .author {
+    font-size: 0.9rem;
+  }
+  .testimonial .testimonial-content .cta-button {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=index.css.map */

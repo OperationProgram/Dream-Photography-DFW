@@ -70,12 +70,11 @@ header {
 
 .hero-section {
     position: relative;
-    // height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 80px;
     .carousel {
         position: relative;
         width: 100%;
@@ -126,7 +125,7 @@ header {
 
 
 .header-text-section {
-    // padding: 7rem;
+    padding: 7rem;
     background-color: $secondary-color;
     text-align: center;
 
@@ -147,6 +146,71 @@ header {
         color: $primary-color;
         width: 80%;
         margin: auto;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 5rem;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 4rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 3rem;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 2rem;
+
+        h1 {
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            width: 90%;
+        }
     }
 }
 
@@ -190,12 +254,79 @@ header {
                 margin: 0;
                 font-size: 1rem;
                 letter-spacing: .12em;
-
             }
         }
 
         &:hover .photo-overlay {
             opacity: 0;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .photo-card {
+            width: 45%;
+        }
+
+        .photo-overlay {
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+
+        .photo-card {
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+
+        .photo-overlay {
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .photo-card {
+            width: 90%;
+        }
+
+        .photo-overlay {
+            h2 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .photo-card {
+            width: 100%;
+        }
+
+        .photo-overlay {
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            p {
+                font-size: 0.7rem;
+            }
         }
     }
 }
@@ -207,6 +338,11 @@ header {
     margin: 0 auto;
     align-items: center; /* Center vertically */
     line-height: 2;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
 }
 
 .about-text {
@@ -235,6 +371,52 @@ header {
             background-color: darken($primary-color, 10%);
         }
     }
+
+    @media (max-width: 992px) {
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            margin-top: 0.5rem;
+            padding: 0.4rem 0.8rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        a {
+            padding: 0.3rem 0.6rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        a {
+            padding: 0.2rem 0.5rem;
+        }
+    }
 }
 
 .about-image {
@@ -249,6 +431,28 @@ header {
         clip-path: circle(50% at 50% 50%);
         height: auto;
         border-radius: 10px;
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 1.5rem;
+
+        img {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        img {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        img {
+            width: 60%;
+        }
     }
 }
 
@@ -291,7 +495,6 @@ header {
             font-weight: bold;
             padding: 20px;
             letter-spacing: .12em;
-
         }
 
         .cta-button {
@@ -307,5 +510,80 @@ header {
             }
         }
     }
-}
 
+    @media (max-width: 1200px) {
+        height: 50vh;
+
+        .testimonial-content {
+            blockquote {
+                font-size: 1.4rem;
+            }
+
+            .author {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 0.7rem 1.4rem;
+                font-size: 0.95rem;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        height: 40vh;
+
+        .testimonial-content {
+            blockquote {
+                font-size: 1.3rem;
+            }
+
+            .author {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.65rem 1.3rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: 35vh;
+
+        .testimonial-content {
+            blockquote {
+                font-size: 1.2rem;
+            }
+
+            .author {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        height: 30vh;
+
+        .testimonial-content {
+            blockquote {
+                font-size: 1.1rem;
+            }
+
+            .author {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 0.55rem 1.1rem;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
