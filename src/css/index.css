@@ -112,6 +112,11 @@ header nav .nav-links li a:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+  }
+}
 .header-text-section {
   padding: 7rem;
   background-color: #fff;
