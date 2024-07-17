@@ -34,7 +34,7 @@ header {
 }
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   /* Media query for screens 768px and smaller */
@@ -44,22 +44,22 @@ header nav .logo {
   color: #fff;
   text-align: center;
 }
-header nav .nav-links {
+header nav .nav-links-regular {
   list-style: none;
   display: flex;
   flex: 1;
   justify-content: space-between;
 }
-header nav .nav-links li {
+header nav .nav-links-regular li {
   flex: 1;
   text-align: center;
 }
-header nav .nav-links li a {
+header nav .nav-links-regular li a {
   color: black;
   text-decoration: none;
   font-size: 1rem;
 }
-header nav .nav-links li a:hover {
+header nav .nav-links-regular li a:hover {
   color: #f5f5f5;
 }
 header nav .hamburger-menu {
@@ -69,12 +69,79 @@ header nav .hamburger-menu {
   header nav .hamburger-menu {
     display: block; /* Show the hamburger menu */
     cursor: pointer;
+    position: fixed;
+    top: 60px;
+    left: 50px;
   }
-  header nav .nav-links {
+  header nav .nav-links-regular {
     display: none; /* Hide the regular nav-links */
   }
-  header nav .nav-links.active {
-    display: block; /* Show nav-links when hamburger menu is active */
+}
+
+.nav-img-link {
+  display: flex;
+  justify-content: center;
+}
+.nav-img-link img {
+  width: 70%;
+  min-width: 230px;
+}
+
+.slide-menu.open {
+  left: 0; /* Slide menu into view */
+}
+
+.close-icon.open {
+  display: block;
+  margin-left: 90%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 30px;
+}
+
+.close-icon {
+  display: none;
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially off screen */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  z-index: 900;
+  transition: left 0.3s ease;
+  padding-top: 60px; /* Adjust for top padding */
+  /* Media query for screens 768px and smaller */
+}
+.slide-menu .nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.slide-menu .nav-links li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #555;
+}
+.slide-menu .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.slide-menu .nav-links li a:hover {
+  color: #ffcc00;
+}
+.slide-menu .nav-img-link img {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .slide-menu .slide-menu {
+    width: 80%;
+    left: -80%; /* Off screen initially */
   }
 }
 
