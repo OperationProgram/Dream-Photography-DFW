@@ -130,7 +130,7 @@ header nav .hamburger-menu {
   font-size: 16px;
 }
 .slide-menu .nav-links li a:hover {
-  color: #ffcc00;
+  color: rgba(108, 208, 255, 0.5);
 }
 .slide-menu .nav-img-link img {
   display: block;
